@@ -1,13 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+import Asset from "./components/Asset";
 
 function App() {
   return (
-    <div className={"min-h-screen bg-pink"}>
+    <div className={"min-h-screen bg-pink flex flex-col"}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<h1>Hey</h1>} />
+        <Route path=":id" element={<Asset />} />
         <Route
           path="*"
           element={
